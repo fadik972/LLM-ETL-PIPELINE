@@ -1,0 +1,24 @@
+# Environment variables - NEVER push this
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Airflow logs
+airflow/logs/
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# OS files
+.DS_Store
+*.swp
+
+# Docker volumes (managed by Docker, not git)
+postgres_data/
