@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: pipeline
+    database: pipeline
+    schema: public
+    tables:
+      - name: raw_articles
+        description: Raw articles from NewsAPI and arXiv
+      - name: extracted_entities
+        description: Entities extracted by LLM
+      - name: article_sentiment
+        description: Sentiment scores from LLM
+      - name: document_chunks
+        description: Vector embeddings for RAG
+
+models:
+  - name: top_entities
+    description: Most mentioned entities cleaned and aggregated
+  - name: sentiment_summary
+    description: Sentiment breakdown by source and day
+  - name: article_overview
+    description: Full article view with sentiment and entity count
